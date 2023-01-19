@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Sofia Sans', sans-serif;
+  background-color: #1a202c;
+  color: aliceblue;
+}
+
+ /*
+ #3a3a3c for letter BG
+ #ffffff for letter
+ #818384 keyboard BG
+ #538d4e correct letter
+ #b59f3b letter present
+ */
