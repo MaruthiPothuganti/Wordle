@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineEnter } from "react-icons/ai";
 import { IoBackspaceOutline } from "react-icons/io5";
+import { Key } from "./Key";
 
 const keysLine1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
 const keysLine2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
@@ -10,18 +11,14 @@ export const Keyboard = () => {
   return (
     <section className="grid gap-3  m-4 sm:w-[60%] md:w-[40%] w-[90%]">
       <div className="flex gap-2">
-        {keysLine1.map((key) => (
-          <button className="bg-[#3a3a3c] text-white grid place-items-center rounded-md h-11 flex-1">
-            {key}
-          </button>
+        {keysLine1.map((keyLetter) => (
+          <Key key={keyLetter} keyLetter={keyLetter} />
         ))}
       </div>
       <div className="flex gap-2">
         <div className="flex-[0.5]"></div>
-        {keysLine2.map((key) => (
-          <button className="h-11  bg-[#3a3a3c] text-white grid place-items-center rounded-md flex-1">
-            {key}
-          </button>
+        {keysLine2.map((keyLetter) => (
+          <Key key={keyLetter} keyLetter={keyLetter} />
         ))}
         <div className="flex-[0.5]"></div>
       </div>
@@ -33,10 +30,8 @@ export const Keyboard = () => {
             title="Enter"
           />
         </button>
-        {keysLine3.map((key) => (
-          <button className="h-11  bg-[#3a3a3c] text-white grid place-items-center rounded-md flex-1">
-            {key}
-          </button>
+        {keysLine3.map((keyLetter) => (
+          <Key key={keyLetter} keyLetter={keyLetter} />
         ))}
         <button className="h-11 w-14 bg-[#3a3a3c] text-white grid place-items-center rounded-md flex-1">
           <IoBackspaceOutline
